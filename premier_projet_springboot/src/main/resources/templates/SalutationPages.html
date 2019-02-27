@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1"/>
+<title>Insert title here</title>
+<link rel ="stylesheet" th:href="@{css/couleur.css}"/> 
+</head>
+<body>
+
+<h1> Bonjour </h1>
+<h2 th:text = "${ nom }"> </h2>
+<h3 th:text = "${ nombre }"> </h3>
+<h1> ..et les conditions </h1>
+<p th:if = "${ bool=true }"> la variable vaut 1 ou 'TRUE' </p>
+<p th:if = "${ bool=false }"> la variable vaut 0 ou 'FALSE' </p>
+<p th:if = "${ nombre gt 100 }"> le nombre est plus grand que 100 </p>
+<p th:if = "${ nombre le 100 }"> le nombre est inferieur ou egal 100 </p>
+<p th:if = "${ nombre ge 100 }"> le nombre est superieur ou egal a 100 </p>
+
+<p th:unless="${nombre gt 100}"> La variable nombre est bien 100 </p>
+
+<p th:switch="${ nombre }">
+<p th:case="55">55</p>
+<p th:case="99">99</p>
+<p th:case="44">44</p>
+<p th:case="150">150</p>
+<p th:case="214">214</p>
+<p th:case="512">512</p>
+<p th:case="*">????</p>
+
+</body>
+</html>
